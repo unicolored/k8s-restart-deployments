@@ -1,0 +1,6 @@
+namePrefix: cron-restart-
+namespace: kube-custom
+resources:
+  - namespace.yaml
+  - rbac.yaml
+  - cronjob.yaml

@@ -1,0 +1,17 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: cronjob-deployments
+  namespace: kube-custom
+spec:
+  schedule: "0 23 * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          serviceAccountName: deployments-sa
+          containers:
+            - name: cronjob-deployments
+              image: your-registry/restart-deployments:latest
+              imagePullPolicy: IfNotPresent
+          restartPolicy: OnFailure
