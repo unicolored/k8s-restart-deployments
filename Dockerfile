@@ -1,3 +1,5 @@
+ARG BUILDKIT_SBOM_SCAN_STAGE=true
+
 FROM bitnami/kubectl:latest
 
 # Create a directory for the script
