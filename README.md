@@ -54,15 +54,15 @@ The repository includes Kustomize manifests in the `kustomize/` directory:
 To deploy:
 
 ```bash
-kubectl apply -k kustomize/
+kubectl apply -k kube-custom/
 ```
 
 This creates:
 
-- `ServiceAccount: cron-restart-restart-deployments-sa` in `kube-custom`.
-- `ClusterRole: cron-restart-restart-deployments-role`.
-- `ClusterRoleBinding: cron-restart-restart-deployments-binding`.
-- `CronJob: cron-restart-restart-deployments` in `kube-custom`.
+- `ServiceAccount: cron-restart-deployments-sa` in `kube-custom`.
+- `ClusterRole: cron-restart-deployments-role`.
+- `ClusterRoleBinding: cron-restart-deployments-binding`.
+- `CronJob: cron-restart-cronjob-deployments` in `kube-custom`.
 
 ### 4. Verify the Deployment
 
