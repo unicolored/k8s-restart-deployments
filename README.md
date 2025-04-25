@@ -1,5 +1,7 @@
 # k8s-restart-deployments
 
+[![Build and Push Docker Image](https://github.com/unicolored/k8s-restart-deployments/actions/workflows/build-push.yaml/badge.svg)](https://github.com/unicolored/k8s-restart-deployments/actions/workflows/build-push.yaml)
+
 A Kubernetes `CronJob` to restart all deployments daily at 23:00 UTC, excluding `kube-system` and `kube-custom` namespaces. This project provides a Docker image and Kubernetes manifests to automate deployment restarts in a Kubernetes cluster.
 
 The Docker image is publicly available at [Docker Hub: unicolored/k8s-restart-deployments](https://hub.docker.com/r/unicolored/k8s-restart-deployments). The repository includes a shell script, Dockerfile, and Kustomize manifests to deploy the `CronJob` with proper RBAC permissions.
